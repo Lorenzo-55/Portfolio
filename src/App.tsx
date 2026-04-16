@@ -48,7 +48,7 @@ function App() {
           <div className="hero-image-wrap">
             <img
               className="hero-image"
-              src="/Photo2.jpg"
+              src={`${import.meta.env.BASE_URL}Photo2.jpg`}
               alt="Portrait"
             />
           </div>
@@ -56,7 +56,40 @@ function App() {
 
         <section id="experience" className="section">
           <h2>Experience</h2>
-          <p>Internship, freelance, or relevant work experience.</p>
+
+          <div className="projects">
+            <div className="card">
+              <h3>Full Stack Web Developer Intern</h3>
+              <p className="tech">Six Digit Club Sdn. Bhd. • July 2025 – Oct 2025</p>
+              <p>
+                Worked as a Full Stack Web Developer intern, contributing to two company
+                web development projects.
+              </p>
+              <p>
+                <strong>Automated Crypto Trading Bot</strong> — Built with Flask
+                (Python) and React. Responsibilities included developing backend APIs,
+                integrating trading and analytics features, and ensuring responsive,
+                user-friendly interfaces.
+              </p>
+              <p>
+                <strong>Crypto Analysis Website</strong> — Developed a platform offering
+                real-time market insights. Responsibilities included developing backend
+                APIs, building frontend components, and managing the server.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>Freelance Web Developer</h3>
+              <p className="tech">March 2026 – Current</p>
+              <p>
+                Currently building a tourism website for a client using React, Laravel,
+                and MySQL.
+              </p>
+              <p>
+                The project is currently temporarily deployed through GitHub Pages.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="projects" className="section">
