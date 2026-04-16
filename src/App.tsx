@@ -1,121 +1,101 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <nav className="navbar">
+        <div className="nav-inner">
+          <div className="logo">Lorenzo Frattini</div>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <div className="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </nav>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <main>
+        <section className="section hero" id="about">
+          <div className="hero-content">
+            <p className="hero-kicker">Hello, I’m</p>
+            <h1>Lorenzo</h1>
+            <p className="subtitle">Full-Stack Developer</p>
+            <p className="hero-description">
+              Passionate about building clean, responsive, and practical digital
+              solutions with modern technologies. I focus on creating polished
+              user experiences and full-stack applications that solve real
+              problems.
+            </p>
+
+            <div className="hero-actions">
+              <a
+                className="hero-button primary"
+                href="/Lorenzo_CV.pdf"
+                download
+              >
+                Download Resume
+              </a>
+              <a className="hero-button secondary" href="#contact">
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-image-wrap">
+            <img
+              className="hero-image"
+              src="/Photo2.jpg"
+              alt="Portrait"
+            />
+          </div>
+        </section>
+
+        <section id="experience" className="section">
+          <h2>Experience</h2>
+          <p>Internship, freelance, or relevant work experience.</p>
+        </section>
+
+        <section id="projects" className="section">
+          <h2>Projects</h2>
+
+          <div className="projects">
+            <div className="card">
+              <h3>Project One</h3>
+              <p>Short description of what it does.</p>
+              <p className="tech">React • Flask • PostgreSQL</p>
+              <div className="links">
+                <a href="#">Live</a>
+                <a href="#">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" className="section">
+          <h2>Education</h2>
+          <p>Your degree, university, etc.</p>
+        </section>
+
+        <section id="skills" className="section">
+          <h2>Skills</h2>
+          <p>React, Python, SQL, etc.</p>
+        </section>
+
+        <section id="contact" className="section">
+          <h2>Contact</h2>
+          <div className="links">
+            <a href="mailto:your@email.com">Email</a>
+            <a href="https://github.com/yourusername">GitHub</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
