@@ -253,25 +253,41 @@ function LandingPage() {
             <Card
               title="Restaurant Management System"
               subtitle="C# • XAML • SQLite"
-              description="Desktop application for orders, stock tracking, billing, and reporting in a centralized restaurant workflow."
+              description="Desktop application for orders, stock tracking, billing, and reporting."
+              image={`${import.meta.env.BASE_URL}project-images/restaurant.jpg`}
+              github="https://github.com/yourusername/project1"
+              live="https://your-live-site.com"
+              docs="https://your-docs-link.com"
             />
 
             <Card
               title="Stock Market Trend Prediction"
               subtitle="Python • Machine Learning"
-              description="Predictive model built on historical OHLCV data to forecast S&P 500 and NASDAQ 100 closing trends."
+              description="Predictive model built on historical OHLCV data for market trend forecasting."
+              image={`${import.meta.env.BASE_URL}project-images/stock.jpg`}
+              github="https://github.com/yourusername/project2"
+              live="https://your-live-site.com"
+              docs="https://your-docs-link.com"
             />
 
             <Card
               title="Tourism Website"
               subtitle="React • Laravel • MySQL"
-              description="Modern tourism platform with structured content, scalable frontend architecture, and clean UI-focused design."
+              description="Modern tourism platform with structured content and clean UI."
+              image={`${import.meta.env.BASE_URL}project-images/tourism.jpg`}
+              github="https://github.com/yourusername/project3"
+              live="https://your-live-site.com"
+              docs="https://your-docs-link.com"
             />
 
             <Card
               title="Crypto Web Platform"
               subtitle="Flask • React • APIs"
-              description="Worked on frontend and backend features for crypto-related web applications, analytics tools, and API-driven pages."
+              description="Frontend and backend work for analytics tools and API-driven pages."
+              image={`${import.meta.env.BASE_URL}project-images/crypto.jpg`}
+              github="https://github.com/yourusername/project4"
+              live="https://your-live-site.com"
+              docs="https://your-docs-link.com"
             />
           </div>
         </section>
@@ -282,11 +298,6 @@ function LandingPage() {
 
 
 
-
-        <section id="education" className="section">
-          <h2>Education</h2>
-          <p>Your degree, university, etc.</p>
-        </section>
 
         <section id="skills" className="section">
           <h2>Skills</h2>
