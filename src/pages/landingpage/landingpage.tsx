@@ -1,6 +1,9 @@
 import "./landingpage.css";
-import { FaGraduationCap, FaBriefcase, FaCode } from "react-icons/fa";
+import { FaGraduationCap, FaCode } from "react-icons/fa";
 import Card from "../../components/card/Card";
+
+import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
+import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 import { FaJs, FaPython, FaDatabase, FaGitAlt, FaHtml5, FaCss3Alt, FaLinux } from "react-icons/fa";
 
@@ -43,22 +46,20 @@ function LandingPage() {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll("main section[id]");
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visible.length > 0) {
-          setActiveSection(visible[0].target.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
       },
       {
         root: null,
-        rootMargin: "-35% 0px -45% 0px",
-        threshold: [0.2, 0.4, 0.6],
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
       }
     );
 
@@ -406,14 +407,88 @@ function LandingPage() {
 
 
 
+        {/* divider */}
+        <div className="section-divider" />
 
+        <section id="contact" className="section contact-section">
+          <div className="contact-header">
+            <h2 className="contact-heading">Contact Me</h2>
+            <p className="contact-subtitle">
+              Let’s connect and build something useful together
+            </p>
+          </div>
 
-        <section id="contact" className="section">
-          <h2>Contact</h2>
-          <div className="links">
-            <a href="mailto:your@email.com">Email</a>
-            <a href="https://github.com/yourusername">GitHub</a>
-            <a href="#">LinkedIn</a>
+          <div className="contact-grid">
+            <div className="contact-left">
+              <h3>Get In Touch</h3>
+              <p className="contact-description">
+                I’m open to job opportunities, freelance work, and projects where I can
+                contribute across the full stack. If you’re looking for a developer who
+                enjoys building practical and well-structured solutions, feel free to
+                reach out.
+              </p>
+
+              <div className="contact-availability-card">
+                <div className="contact-availability-badge">
+                  <span className="contact-status-dot" />
+                  <span>Available for Jobs & Work</span>
+                </div>
+
+                <p>
+                  Currently open to full-time roles, internships, freelance work, and
+                  collaborative development projects.
+                </p>
+              </div>
+            </div>
+
+            <div className="contact-right">
+              <a className="contact-item" href="tel:+94778052175">
+                <span className="contact-icon phone">
+                  <HiOutlinePhone />
+                </span>
+                <span className="contact-text">+94 77 805 2175</span>
+              </a>
+
+              <a className="contact-item" href="mailto:LorenzoFrattini555@gmail.com">
+                <span className="contact-icon email">
+                  <HiOutlineMail />
+                </span>
+                <span className="contact-text">LorenzoFrattini555@gmail.com</span>
+              </a>
+
+              <a
+                className="contact-item"
+                href="https://github.com/Lorenzo-55"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="contact-icon github">
+                  <FaGithub />
+                </span>
+                <span className="contact-text">GitHub</span>
+              </a>
+
+              <a
+                className="contact-item"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="contact-icon linkedin">
+                  <FaLinkedin />
+                </span>
+                <span className="contact-text">LinkedIn</span>
+              </a>
+
+              <div className="contact-item contact-item-static">
+                <span className="contact-icon work">
+                  <FaBriefcase />
+                </span>
+                <span className="contact-text contact-highlight">
+                  Open to jobs and freelance work
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
