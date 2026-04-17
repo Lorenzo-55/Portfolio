@@ -2,6 +2,26 @@ import "./landingpage.css";
 import { FaGraduationCap, FaBriefcase, FaCode } from "react-icons/fa";
 import Card from "../../components/card/Card";
 
+import { FaJs, FaPython, FaDatabase, FaGitAlt, FaHtml5, FaCss3Alt, FaLinux } from "react-icons/fa";
+
+import {
+  SiTypescript,
+  SiSharp,
+  SiReact,
+  SiFlask,
+  SiLaravel,
+  SiVite,
+  SiTailwindcss,
+  SiRedux,
+  SiGithub,
+  SiMysql,
+  SiSqlite,
+  SiDotnet,
+  SiPhp
+} from "react-icons/si";
+
+import { VscVscode } from "react-icons/vsc";
+
 import { useEffect, useState } from "react";
 
 function LandingPage() {
@@ -99,7 +119,7 @@ function LandingPage() {
 
 
       <main>
-        <section className="section hero" id="about">
+        <section className="section hero" id="home">
           <div className="hero-content">
             <p className="hero-kicker">Hello, I’m</p>
             <h1>Lorenzo</h1>
@@ -163,6 +183,65 @@ function LandingPage() {
         </section>
 
 
+
+        <section id="skills" className="section skills-section">
+          <div className="skills-header">
+            <h2 className="skills-heading">Technical Skills</h2>
+            <p className="skills-subtitle">
+              Core technologies and tools I work with across development
+            </p>
+          </div>
+
+          <div className="skills-grid">
+            <div className="skills-block">
+              <div className="skills-block-header">
+                <h3>Languages</h3>
+              </div>
+
+              <div className="skills-tags">
+                <span className="skill-tag"><FaHtml5 /> HTML</span>
+                <span className="skill-tag"><FaCss3Alt /> CSS</span>
+                <span className="skill-tag"><FaJs /> JavaScript</span>
+                <span className="skill-tag"><SiTypescript /> TypeScript</span>
+                <span className="skill-tag"><FaPython /> Python</span>
+                <span className="skill-tag"><SiSharp /> C#</span>
+                <span className="skill-tag"><SiPhp /> PHP</span>
+                <span className="skill-tag"><FaDatabase /> SQL</span>
+              </div>
+            </div>
+
+            <div className="skills-block">
+              <div className="skills-block-header">
+                <h3>Frameworks / Libraries</h3>
+              </div>
+
+              <div className="skills-tags">
+                <span className="skill-tag"><SiReact /> React</span>
+                <span className="skill-tag"><SiFlask /> Flask</span>
+                <span className="skill-tag"><SiLaravel /> Laravel</span>
+                <span className="skill-tag"><SiVite /> Vite</span>
+                <span className="skill-tag"><SiTailwindcss /> Tailwind</span>
+                <span className="skill-tag"><SiRedux /> Redux</span>
+                <span className="skill-tag"><SiDotnet /> .NET</span>
+              </div>
+            </div>
+
+            <div className="skills-block">
+              <div className="skills-block-header">
+                <h3>Tools</h3>
+              </div>
+
+              <div className="skills-tags">
+                <span className="skill-tag"><FaGitAlt /> Git</span>
+                <span className="skill-tag"><SiGithub /> GitHub</span>
+                <span className="skill-tag"><SiMysql /> MySQL</span>
+                <span className="skill-tag"><SiSqlite /> SQLite</span>
+                <span className="skill-tag"><FaLinux /> Linux</span>
+                <span className="skill-tag"><VscVscode /> VS Code</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
 
@@ -298,11 +377,6 @@ function LandingPage() {
 
 
 
-
-        <section id="skills" className="section">
-          <h2>Skills</h2>
-          <p>React, Python, SQL, etc.</p>
-        </section>
 
         <section id="contact" className="section">
           <h2>Contact</h2>
