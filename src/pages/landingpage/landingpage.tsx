@@ -72,7 +72,12 @@ function LandingPage() {
     <>
       <nav className="navbar">
         <div className="nav-inner">
-          <div className="logo">Lorenzo Frattini</div>
+          <button
+            className="logo"
+            onClick={() => scrollTo("home")}
+          >
+            Lorenzo Frattini
+          </button>
 
           <div className="nav-links">
             <button
@@ -140,9 +145,12 @@ function LandingPage() {
               >
                 Download Resume
               </a>
-              <a className="hero-button secondary" href="#contact">
+              <button
+                className="hero-button secondary"
+                onClick={() => scrollTo("contact")}
+              >
                 Contact Me
-              </a>
+              </button>
             </div>
           </div>
 
@@ -166,10 +174,13 @@ function LandingPage() {
 
         {/* about me */}
         <section id="about" className="section about-section">
+          <h2 className="section-title">About Me</h2>
+              <p className="section-subtitle">
+                A quick introduction to who I am and what I do
+              </p>
+
           <div className="about-layout">
             <div className="about-inner">
-              <h2 className="about-heading">About Me</h2>
-
               <p className="about-text">
                 Hi, my name is Lorenzo, and I’m a full-stack developer who enjoys building
                 things that actually work well in real-world scenarios. I started out being
@@ -204,7 +215,7 @@ function LandingPage() {
                   </div>
 
                   <div className="about-stat-item">
-                    <h3>6+ </h3>
+                    <h3>6+</h3>
                     <p>Months Experience</p>
                   </div>
                 </div>
@@ -215,10 +226,13 @@ function LandingPage() {
 
 
 
+        {/* divider */}
+        <div className="section-divider" />
+
         <section id="skills" className="section skills-section">
           <div className="skills-header">
-            <h2 className="skills-heading">Technical Skills</h2>
-            <p className="skills-subtitle">
+            <h2 className="section-title">Technical Skills</h2>
+            <p className="section-subtitle">
               My arsenal of tools and technologies I work with across development
             </p>
           </div>
@@ -282,7 +296,10 @@ function LandingPage() {
         <div className="section-divider" />
 
         <section id="experience" className="section experience-section">
-          <h2 className="experience-heading">Experience</h2>
+          <h2 className="section-title">Experience</h2>
+              <p className="section-subtitle">
+                My professional and academic journey so far
+              </p>
 
           <div className="experience-list">
             <div className="experience-row">
@@ -352,30 +369,22 @@ function LandingPage() {
 
 
 
-
         {/* divider */}
         <div className="section-divider" />
 
         <section id="projects" className="section projects-section">
-          <h2 className="projects-heading">Projects</h2>
+          <h2 className="section-title">Projects</h2>
+              <p className="section-subtitle">
+                A selection of work I’ve built and contributed to
+              </p>
 
           <div className="projects-grid">
             <Card
               title="Restaurant Management System"
               subtitle="C# • XAML • SQLite"
               description="Desktop application for orders, stock tracking, billing, and reporting."
-              image={`${import.meta.env.BASE_URL}project-images/restaurant.jpg`}
+              image={`${import.meta.env.BASE_URL}RMS.png`}
               github="https://github.com/yourusername/project1"
-              live="https://your-live-site.com"
-              docs="https://your-docs-link.com"
-            />
-
-            <Card
-              title="Stock Market Trend Prediction"
-              subtitle="Python • Machine Learning"
-              description="Predictive model built on historical OHLCV data for market trend forecasting."
-              image={`${import.meta.env.BASE_URL}project-images/stock.jpg`}
-              github="https://github.com/yourusername/project2"
               live="https://your-live-site.com"
               docs="https://your-docs-link.com"
             />
@@ -384,7 +393,7 @@ function LandingPage() {
               title="Tourism Website"
               subtitle="React • Laravel • MySQL"
               description="Modern tourism platform with structured content and clean UI."
-              image={`${import.meta.env.BASE_URL}project-images/tourism.jpg`}
+              image={`${import.meta.env.BASE_URL}tourism_site2.png`}
               github="https://github.com/yourusername/project3"
               live="https://your-live-site.com"
               docs="https://your-docs-link.com"
@@ -394,10 +403,30 @@ function LandingPage() {
               title="Crypto Web Platform"
               subtitle="Flask • React • APIs"
               description="Frontend and backend work for analytics tools and API-driven pages."
-              image={`${import.meta.env.BASE_URL}project-images/crypto.jpg`}
+              image={`${import.meta.env.BASE_URL}astrabot.png`}
               github="https://github.com/yourusername/project4"
               live="https://your-live-site.com"
               docs="https://your-docs-link.com"
+            />
+
+            <Card
+              title="Portfolio Website"
+              subtitle="React • Vite • TypeScript"
+              description="Personal portfolio website showcasing projects, experience, and technical skills with a clean and responsive design."
+              image={`${import.meta.env.BASE_URL}portfolio.png`}
+              github="https://github.com/yourusername/portfolio"
+              live="https://your-portfolio-link.com"
+              docs="#"
+            />
+
+            <Card
+              title="Data Scraping Platform"
+              subtitle="Python • Web Scraping • APIs"
+              description="Built a data scraping tool to collect, process, and structure web data for analysis and integration into backend systems."
+              image={`${import.meta.env.BASE_URL}scraper.png`}
+              github="https://github.com/yourusername/scraper"
+              live="#"
+              docs="#"
             />
           </div>
         </section>
@@ -412,8 +441,8 @@ function LandingPage() {
 
         <section id="contact" className="section contact-section">
           <div className="contact-header">
-            <h2 className="contact-heading">Contact Me</h2>
-            <p className="contact-subtitle">
+            <h2 className="section-title">Contact Me</h2>
+            <p className="section-subtitle">
               Let’s connect and build something useful together
             </p>
           </div>
