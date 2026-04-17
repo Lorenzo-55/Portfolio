@@ -165,20 +165,50 @@ function LandingPage() {
 
         {/* about me */}
         <section id="about" className="section about-section">
-          <div className="about-inner">
-            <h2 className="about-heading">About Me</h2>
+          <div className="about-layout">
+            <div className="about-inner">
+              <h2 className="about-heading">About Me</h2>
 
-            <p className="about-text">
-              Computer Science graduate focused on building modern web applications.
-              Strong in React, backend APIs, and structured system design. Experience
-              working across full-stack environments, from UI to deployment.
-            </p>
+              <p className="about-text">
+                Hi, my name is Lorenzo, and I’m a full-stack developer who enjoys building
+                things that actually work well in real-world scenarios. I started out being
+                curious about how software works behind the scenes, and that naturally led
+                me into backend development, APIs, and system design.
+              </p>
 
-            <p className="about-text">
-              Currently developing a tourism platform with scalable architecture and
-              clean UI/UX principles, while continuing to expand into more advanced
-              backend systems and real-world deployments.
-            </p>
+              <p className="about-text">
+                I have an international background, being an Italian citizen who grew up in
+                Sri Lanka, which has shaped the way I approach problem-solving and working
+                across different environments. Over time, I’ve worked on a mix of projects,
+                from a desktop restaurant management system to a machine learning model for
+                stock prediction, and more recently full-stack web platforms.
+              </p>
+
+              <p className="about-text">
+                I mainly use React, Flask, C#, Python, and SQL, and I focus on keeping my
+                code clean, structured, and scalable. I’ve also had the chance to work on
+                real projects during my internship and freelance work, including a crypto
+                trading platform and a tourism website. I like working across the full
+                stack, but I especially enjoy the logic and problem-solving that comes with
+                backend development.
+              </p>
+            </div>
+
+            <div className="about-side-card">
+              <div className="about-stat-card">
+                <div className="about-stat-card-inner">
+                  <div className="about-stat-item">
+                    <h3>5+</h3>
+                    <p>Projects</p>
+                  </div>
+
+                  <div className="about-stat-item">
+                    <h3>6+ </h3>
+                    <p>Months Experience</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -188,7 +218,7 @@ function LandingPage() {
           <div className="skills-header">
             <h2 className="skills-heading">Technical Skills</h2>
             <p className="skills-subtitle">
-              Core technologies and tools I work with across development
+              My arsenal of tools and technologies I work with across development
             </p>
           </div>
 
@@ -386,6 +416,16 @@ function LandingPage() {
             <a href="#">LinkedIn</a>
           </div>
         </section>
+
+
+        <footer className="footer">
+          <div className="footer-inner">
+            <p>© {new Date().getFullYear()} Lorenzo Frattini</p>
+            <p>Developed with React</p>
+          </div>
+        </footer>
+
+        
       </main>
     </>
   );
