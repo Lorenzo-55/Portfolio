@@ -384,8 +384,6 @@ function LandingPage() {
               subtitle="C# • XAML • SQLite"
               description="Desktop application for orders, stock tracking, billing, and reporting."
               image={`${import.meta.env.BASE_URL}RMS.png`}
-              github="https://github.com/yourusername/project1"
-              live="https://your-live-site.com"
               docs="https://your-docs-link.com"
             />
 
@@ -396,7 +394,7 @@ function LandingPage() {
               image={`${import.meta.env.BASE_URL}tourism_site2.png`}
               github="https://github.com/yourusername/project3"
               live="https://your-live-site.com"
-              docs="https://your-docs-link.com"
+              docs="/projects/tourism-website"
             />
 
             <Card

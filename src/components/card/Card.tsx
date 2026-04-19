@@ -1,4 +1,7 @@
 import "./Card.css";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 type CardProps = {
   title: string;
@@ -11,6 +14,8 @@ type CardProps = {
 };
 
 function Card({ title, subtitle, description, image, github, live, docs }: CardProps) {
+  const isInternalDocsLink = docs?.startsWith("/");
+
   return (
     <div className="card">
       <div className="card-image">
@@ -24,21 +29,35 @@ function Card({ title, subtitle, description, image, github, live, docs }: CardP
       <p className="card-body">{description}</p>
 
       <div className="card-actions">
-        {github && (
-          <a href={github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        )}
-        {live && (
-          <a href={live} target="_blank" rel="noreferrer">
-            Live
-          </a>
-        )}
-        {docs && (
-          <a href={docs} target="_blank" rel="noreferrer">
-            Docs
-          </a>
-        )}
+        <div className="card-actions-row">
+          {github && (
+            <a href={github} target="_blank" rel="noreferrer" className="icon-btn">
+              <FaGithub />
+            </a>
+          )}
+
+          {live && (
+            <a href={live} target="_blank" rel="noreferrer" className="icon-btn">
+              <FiExternalLink />
+            </a>
+          )}
+        </div>
+
+        {docs &&
+          (isInternalDocsLink ? (
+            <Link to={docs} className="info-btn">
+              More Info <FiExternalLink />
+            </Link>
+          ) : (
+            <a
+              href={docs}
+              target="_blank"
+              rel="noreferrer"
+              className="info-btn"
+            >
+              More Info <FiExternalLink />
+            </a>
+          ))}
       </div>
     </div>
   );

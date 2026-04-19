@@ -64,23 +64,63 @@
 
 .card-actions {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 
-.card-actions a {
-  padding: 8px 12px;
-  border-radius: 8px;
+/* top row (github + live) */
+.card-actions-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start; /* keeps them grouped left */
+}
+
+/* icon buttons */
+.icon-btn {
+  width: 48px;          /* fixed size */
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
   background: #2a2a2a;
-  color: #b2eccf;
-  font-size: 0.85rem;
-  text-decoration: none;
+  color: #ffffff;
   border: 1px solid #333;
+
+  font-size: 1.2rem;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: #353535;
+  border-color: #a855f7;
+  color: #a855f7;
+}
+
+/* bottom full width button */
+.info-btn {
+  width: 100%;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 10px;
+  background: #a855f7;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+
   transition: 0.2s;
 }
 
-.card-actions a:hover {
-  background: #353535;
-  border-color: #b2eccf;
+.info-btn:hover {
+  background: #9333ea;
 }
