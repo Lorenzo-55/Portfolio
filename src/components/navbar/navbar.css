@@ -19,6 +19,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  position: relative;
+flex-wrap: nowrap;
 }
 
 .logo {
@@ -26,10 +28,9 @@
   border: none;
   padding: 0;
   cursor: pointer;
-
   font-size: 1.6rem;
   font-weight: 700;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #ffffff;
 }
 
@@ -77,4 +78,70 @@
 
 .nav-links button.active::after {
   transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: row; /* ensure horizontal */
+  }
+
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; 
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.nav-links-open {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 18px 20px 22px;
+    background: rgba(11, 15, 25, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #1f2937;
+    border-bottom: 1px solid #1f2937;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links.nav-links-open button {
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links.nav-links-open button::after {
+    bottom: -5px;
+  }
+}
+
+.logo,
+.menu-toggle {
+  width: auto;
 }
