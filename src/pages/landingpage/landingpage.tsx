@@ -370,15 +370,15 @@ function LandingPage() {
               title="Restaurant Management System"
               subtitle="C# • XAML • SQLite"
               description="Desktop application for orders, stock tracking, billing, and reporting."
-              image={`${import.meta.env.BASE_URL}RMS.png`}
-              docs="https://your-docs-link.com"
+              image={`${import.meta.env.BASE_URL}/projects/RMS.png`}
+              docs="/projects/restaurant-management-system"
             />
 
             <Card
               title="Tourism Website"
               subtitle="React • Laravel • MySQL"
               description="Modern tourism platform with structured content and clean UI."
-              image={`${import.meta.env.BASE_URL}tourism_site2.png`}
+              image={`${import.meta.env.BASE_URL}/projects/tourism_site2.png`}
               github="https://github.com/yourusername/project3"
               live="https://your-live-site.com"
               docs="/projects/tourism-website"
@@ -388,17 +388,17 @@ function LandingPage() {
               title="Crypto Web Platform"
               subtitle="Flask • React • APIs"
               description="Frontend and backend work for analytics tools and API-driven pages."
-              image={`${import.meta.env.BASE_URL}astrabot.png`}
+              image={`${import.meta.env.BASE_URL}/projects/astrabot.png`}
               github="https://github.com/yourusername/project4"
               live="https://your-live-site.com"
-              docs="https://your-docs-link.com"
+              docs="/projects/crypto-web-platform"
             />
 
             <Card
               title="Portfolio Website"
               subtitle="React • Vite • TypeScript"
               description="Personal portfolio website showcasing projects, experience, and technical skills with a clean and responsive design."
-              image={`${import.meta.env.BASE_URL}portfolio.png`}
+              image={`${import.meta.env.BASE_URL}/projects/portfolio.png`}
               github="https://github.com/yourusername/portfolio"
               live="https://your-portfolio-link.com"
               docs="#"
@@ -408,10 +408,10 @@ function LandingPage() {
               title="Data Scraping Platform"
               subtitle="Python • Web Scraping • APIs"
               description="Built a data scraping tool to collect, process, and structure web data for analysis and integration into backend systems."
-              image={`${import.meta.env.BASE_URL}scraper.png`}
+              image={`${import.meta.env.BASE_URL}/projects/scraper.png`}
               github="https://github.com/yourusername/scraper"
               live="#"
-              docs="#"
+              docs="/projects/data-scraping-platform"
             />
           </div>
         </section>
