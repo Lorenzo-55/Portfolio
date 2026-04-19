@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 import { getProjectData } from "../../data/projectdata";
 import Navbar from "../../components/navbar/navbar";
 import "./projectpage.css";
@@ -80,7 +81,35 @@ function ProjectPage() {
               <IoIosArrowBack />
             </button>
 
-            <h1 className="project-title">{project.title}</h1>
+            <div className="project-title-row">
+              <h1 className="project-title">{project.title}</h1>
+
+              <div className="project-header-actions">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-btn"
+                    aria-label="View GitHub repository"
+                  >
+                    <FaGithub />
+                  </a>
+                )}
+
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-btn"
+                    aria-label="View live project"
+                  >
+                    <FiExternalLink />
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
 
           {images.length > 0 && (
