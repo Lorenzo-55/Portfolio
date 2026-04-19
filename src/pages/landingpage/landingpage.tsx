@@ -1,6 +1,7 @@
 import "./landingpage.css";
 import { FaGraduationCap, FaCode } from "react-icons/fa";
 import Card from "../../components/card/Card";
+import Navbar from "../../components/navbar/navbar";
 
 import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
@@ -26,9 +27,45 @@ import {
 import { VscVscode } from "react-icons/vsc";
 
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function LandingPage() {
   const [activeSection, setActiveSection] = useState("about");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const targetId = location.state?.scrollToSection;
+    if (!targetId) return;
+
+    const scrollAfterRender = () => {
+      const element = document.getElementById(targetId);
+      if (!element) {
+        requestAnimationFrame(scrollAfterRender);
+        return;
+      }
+
+      const navbar = document.querySelector(".navbar") as HTMLElement | null;
+      const navbarHeight = navbar?.offsetHeight ?? 0;
+
+      const top =
+        element.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight -
+        12;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+
+      navigate(location.pathname, { replace: true, state: {} });
+    };
+
+    requestAnimationFrame(scrollAfterRender);
+  }, [location.state, location.pathname, navigate]);
+
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -70,57 +107,7 @@ function LandingPage() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="nav-inner">
-          <button
-            className="logo"
-            onClick={() => scrollTo("home")}
-          >
-            Lorenzo Frattini
-          </button>
-
-          <div className="nav-links">
-            <button
-              className={activeSection === "about" ? "active" : ""}
-              onClick={() => scrollTo("about")}
-            >
-              About
-            </button>
-
-            <button
-              className={activeSection === "skills" ? "active" : ""}
-              onClick={() => scrollTo("skills")}
-            >
-              Skills
-            </button>
-
-            <button
-              className={activeSection === "experience" ? "active" : ""}
-              onClick={() => scrollTo("experience")}
-            >
-              Experience
-            </button>
-
-            <button
-              className={activeSection === "projects" ? "active" : ""}
-              onClick={() => scrollTo("projects")}
-            >
-              Projects
-            </button>
-
-            <button
-              className={activeSection === "contact" ? "active" : ""}
-              onClick={() => scrollTo("contact")}
-            >
-              Contact
-            </button>
-          </div>
-        </div>
-      </nav>
-
-
-
-
+    <Navbar activeSection={activeSection} scrollTo={scrollTo} />
 
 
 
