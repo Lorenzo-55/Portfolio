@@ -174,7 +174,7 @@ function ProjectPage() {
 
             {project.responsibilities && project.responsibilities.length > 0 && (
               <div className="project-block">
-                <h2 className="project-label">Responsibilities:</h2>
+                <h2 className="project-label">Responsibilities & Key takeaways:</h2>
                 <ul className="project-list">
                   {project.responsibilities.map((item, index) => (
                     <li key={index}>{item}</li>
