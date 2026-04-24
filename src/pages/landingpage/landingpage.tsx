@@ -206,12 +206,21 @@ function LandingPage() {
                 me into backend development, APIs, and system design.
               </p>
 
-              <p className="about-text">
+              {/* <p className="about-text">
                 I have an international background, being an Italian citizen who grew up in
                 Sri Lanka, which has shaped the way I approach problem-solving and working
                 across different environments. Over time, I’ve worked on a mix of projects,
                 from a desktop restaurant management system to a machine learning model for
                 stock prediction, and more recently full-stack web platforms.
+              </p> */}
+
+              <p className="about-text">
+                I’ve developed a strong foundation through building projects across different areas,
+                from desktop applications to web platforms and data-driven systems. This range of
+                experience has helped me approach problems from multiple angles and build solutions
+                that are both practical and well-structured. Over time, I’ve worked on a mix of
+                projects, including a restaurant management system, a machine learning model for
+                stock prediction, and full-stack web applications.
               </p>
 
               <p className="about-text">
