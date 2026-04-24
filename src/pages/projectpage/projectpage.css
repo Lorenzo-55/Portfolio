@@ -50,9 +50,9 @@
   background: linear-gradient(
     90deg,
     #f8fafc 0%,
-    #e6fffb 35%,
+    #e6fffb 5%,
     #67e8f9 50%,
-    #e6fffb 65%,
+    #e6fffb 95%,
     #f8fafc 100%
   );
   -webkit-background-clip: text;
