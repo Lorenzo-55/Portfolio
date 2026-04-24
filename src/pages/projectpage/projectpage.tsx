@@ -1,3 +1,5 @@
+//src/pages/projectpage/projectpage.tsx
+
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
@@ -52,7 +54,9 @@ function ProjectPage() {
             <div className="project-page-header">
               <button
                 className="project-back-button"
-                onClick={() => navigate(-1)}
+                onClick={() =>
+                  navigate("/", { state: { scrollToSection: "projects" } })
+                }
                 aria-label="Go back"
               >
                 <IoIosArrowBack />
@@ -75,7 +79,9 @@ function ProjectPage() {
           <div className="project-page-header">
             <button
               className="project-back-button"
-              onClick={() => navigate(-1)}
+              onClick={() =>
+                navigate("/", { state: { scrollToSection: "projects" } })
+              }
               aria-label="Go back"
             >
               <IoIosArrowBack />

@@ -1,3 +1,5 @@
+//src/pages/landingpage/landingpage.tsx
+
 import "./landingpage.css";
 import { FaGraduationCap, FaCode } from "react-icons/fa";
 import Card from "../../components/card/Card";
