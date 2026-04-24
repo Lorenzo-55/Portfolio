@@ -123,7 +123,7 @@ export const projectData: Record<string, ProjectPageData> = {
 
   dataScrapingPlatform: {
     slug: "data-scraping-platform",
-    title: "Data Scraping & Crypto Analysis Platform",
+    title: "Crypto Analysis Platform",
 
     gallery: [
       `${import.meta.env.BASE_URL}projects/datascrapping/hero.png`,
