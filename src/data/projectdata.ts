@@ -15,18 +15,18 @@ export const projectData: Record<string, ProjectPageData> = {
   tourismWebsite: {
     slug: "tourism-website",
     title: "Tourism Website (2026)",
-    github: "https://github.com/yourusername/tourismwebsite",
-    live: "https://your-live-site.com",
+    github: "https://github.com/Lorenzo-55/Tourism_site",
+    live: "https://lorenzo-55.github.io/Tourism_site/",
 
     image: `${import.meta.env.BASE_URL}projects/tourism-cover.png`,
     gallery: [
-      `${import.meta.env.BASE_URL}projects/tourism_site2.png`,
-      `${import.meta.env.BASE_URL}projects/tourism_site3.png`,
-      `${import.meta.env.BASE_URL}projects/tourism_site4.png`,
+      `${import.meta.env.BASE_URL}projects/tourism_site/tourism_site2.png`,
+      `${import.meta.env.BASE_URL}projects/tourism_site/tourism_site3.png`,
+      `${import.meta.env.BASE_URL}projects/tourism_site/tourism_site4.png`,
     ],
 
     description:
-      "A modern tourism platform designed to present destinations in a structured, scalable, and visually engaging way, with dynamic content-driven pages and integrated mapping features.",
+      "A tourism website I developed for a client who is involved in the tourism industry. The project involved creating a modern, user-friendly platform to showcase travel destinations, articles, and related content. I focused on building a clean and responsive UI using React, while structuring the backend with Laravel and MySQL to manage content efficiently. The website features dynamic routing, interactive maps, and a scalable architecture designed for future expansion and multilingual support.",
 
     responsibilities: [
       "Designed and implemented a scalable content architecture using reusable data-driven components for destinations and articles.",
@@ -37,7 +37,7 @@ export const projectData: Record<string, ProjectPageData> = {
       "Optimized asset loading and routing for deployment on GitHub Pages.",
     ],
 
-    skills: ["React", "Vite", "JavaScript", "CSS", "UI/UX", "Routing"],
+    skills: ["React", "Vite", "Laravel", "JavaScript", "CSS", "UI/UX", "Routing"],
     teamSize: 1,
   },
 
@@ -45,58 +45,75 @@ export const projectData: Record<string, ProjectPageData> = {
     slug: "restaurant-management-system",
     title: "Restaurant Management System",
 
-    image: `${import.meta.env.BASE_URL}projects/RMS.png`,
+
+      gallery: [
+        `${import.meta.env.BASE_URL}projects/rms/RMS.png`,
+        `${import.meta.env.BASE_URL}projects/rms/Picture4.png`,
+        `${import.meta.env.BASE_URL}projects/rms/Picture1.png`,
+        `${import.meta.env.BASE_URL}projects/rms/Picture2.png`,
+      ],
 
     description:
-      "A desktop application built to streamline restaurant operations including order management, inventory tracking, billing, and reporting through a centralized system.",
+      "A final-year university project where I developed a modular desktop application using C# and WPF to manage core restaurant operations. I designed the system to handle real-time order processing, table management, and integrated billing, improving coordination between waitstaff and kitchen staff. The project focused on usability, efficiency, and reducing operational errors for small to mid-sized restaurants.",
 
     responsibilities: [
-      "Designed and developed a full desktop application using C# and XAML.",
-      "Implemented order processing, stock tracking, and billing modules.",
-      "Built reporting features to monitor sales and inventory performance.",
-      "Integrated SQLite database for persistent and efficient data storage.",
-      "Structured the application to simplify daily restaurant workflows.",
+      "Designed and developed a modular desktop application using C# and XAML (WPF).",
+      "Implemented a drag-and-drop table layout system with real-time status tracking.",
+      "Built an order management workflow with live updates between waitstaff and kitchen.",
+      "Developed an integrated billing system with automatic calculation and order linking.",
+      "Structured a local SQLite database for managing orders, users, tables, and transactions.",
+      "Implemented role-based access control for managers, waitstaff, and kitchen staff.",
+      "Applied layered architecture to separate UI, business logic, and data access.",
     ],
 
     skills: ["C#", "XAML", "SQLite", ".NET", "Desktop Development"],
     teamSize: 1,
   },
 
-  cryptoPlatform: {
+    cryptoPlatform: {
     slug: "crypto-web-platform",
     title: "Crypto Web Platform",
 
-    image: `${import.meta.env.BASE_URL}projects/astrabot.png`,
-
-    description:
-      "A web-based crypto analytics platform built during a full-stack internship, featuring real-time data, backend APIs, and responsive frontend components.",
-
-    responsibilities: [
-      "Developed backend APIs using Flask to handle market data and analytics.",
-      "Built responsive frontend components using React.",
-      "Integrated analytics features and data-driven pages.",
-      "Worked with crypto market data and server-side functionality.",
-      "Improved platform usability and overall performance.",
+    gallery: [
+      `${import.meta.env.BASE_URL}projects/astrabot/astrabot.png`,
+      `${import.meta.env.BASE_URL}projects/astrabot/astrabot2.jpg`,
+      `${import.meta.env.BASE_URL}projects/astrabot/astrabot3.png`,
+      `${import.meta.env.BASE_URL}projects/astrabot/astrabot4.png`,
+      `${import.meta.env.BASE_URL}projects/astrabot/astrabot5.png`,
     ],
 
-    skills: ["Python", "Flask", "React", "APIs", "JavaScript"],
+    description:
+      "A full-stack web platform I worked on during my internship at Six Digit Club, centered around Astra Bot—an automated crypto trading system for managing spot and futures strategies. I contributed to both backend and frontend development, building features for bot management, user interaction, and financial tracking. The platform focused on real-time data handling, usability, and scalable system design to support active trading workflows.",
+
+    responsibilities: [
+      "Developed backend REST APIs using Flask to support trading bot operations and data handling.",
+      "Built and integrated responsive frontend components using React for key platform features.",
+      "Implemented a trading bot logging system with structured storage for spot and futures data.",
+      "Developed a bot history feature allowing users to reload and reuse previous configurations.",
+      "Created multiple user-facing pages including profile management, leaderboard, statements, and referral system.",
+      "Designed and improved UI/UX elements for better usability, consistency, and user engagement.",
+      "Worked with MySQL database design and query optimization for reliable data management.",
+      "Refactored and modularized backend code to improve maintainability and team collaboration.",
+    ],
+
+    skills: ["Python", "Flask", "React", "MySQL", "REST APIs", "Full-Stack Development"],
     teamSize: 5,
   },
 
   portfolioWebsite: {
     slug: "portfolio-website",
     title: "Portfolio Website",
+    github: "https://github.com/Lorenzo-55/portfolio",
+    live: "https://lorenzo-55.github.io/Portfolio/",
 
     image: `${import.meta.env.BASE_URL}projects/portfolio.png`,
 
     description:
-      "A personal portfolio website showcasing projects, experience, and technical skills with a clean, responsive, and modern interface.",
+      "A personal portfolio website I developed to showcase my projects, experience, and technical skills through a clean, responsive, and modern interface. It highlights selected work across full-stack development, with a focus on usability, structure, and visual consistency. The site also reflects my approach to building scalable front-end applications and organizing content-driven projects.",
 
     responsibilities: [
       "Designed and developed the website using React, Vite, and TypeScript.",
-      "Built reusable components for projects, skills, and experience sections.",
       "Implemented responsive layouts for desktop and mobile devices.",
-      "Added smooth scrolling navigation and polished UI styling.",
       "Structured the site for easy updates and future expansion.",
     ],
 
@@ -108,21 +125,29 @@ export const projectData: Record<string, ProjectPageData> = {
     slug: "data-scraping-platform",
     title: "Data Scraping & Crypto Analysis Platform",
 
-    // image: `${import.meta.env.BASE_URL}projects/scraper.png`,
-
-    description:
-      "A data-driven platform for collecting, processing, and structuring web data for analysis, including crypto-related insights and backend integration.",
-
-    responsibilities: [
-      "Built scraping workflows to collect structured data from web sources.",
-      "Processed and cleaned raw data for analysis and storage.",
-      "Integrated collected data into backend systems and API flows.",
-      "Organized data for analytics and reporting purposes.",
-      "Applied the platform to crypto-related data analysis use cases.",
+    gallery: [
+      `${import.meta.env.BASE_URL}projects/datascrapping/hero.png`,
+      `${import.meta.env.BASE_URL}projects/datascrapping/picture1.png`,
+      `${import.meta.env.BASE_URL}projects/datascrapping/picture3.png`,
+      `${import.meta.env.BASE_URL}projects/datascrapping/picture4.png`,
+      `${import.meta.env.BASE_URL}projects/datascrapping/picture6.png`,
     ],
 
-    skills: ["Python", "Web Scraping", "APIs", "Data Processing"],
-    teamSize: 2,
+    description:
+      "A data-driven platform I contributed to during my internship at Six Digit Club, designed to collect and deliver real-time blockchain data for crypto analysis and trading insights. The system enables users to access structured datasets for market research, supported by backend scraping pipelines and interactive frontend tools. I worked on enhancing usability and functionality, including building authentication flows and integrating an advisor chatbot to help interpret and analyze the generated data.",
+
+    responsibilities: [
+      "Contributed to planning and scoping the platform to align with data and user requirements.",
+      "Built login and registration functionality for user authentication and access control.",
+      "Developed and integrated an advisor chatbot to assist users in analyzing collected crypto data.",
+      "Supported frontend UI/UX improvements to enhance accessibility and user interaction.",
+      "Built and refined data scraping workflows to collect structured blockchain data.",
+      "Processed and organized raw data for integration into backend systems and APIs.",
+      "Assisted in structuring data for analytics and user-facing reporting features.",
+    ],
+
+    skills: ["Python", "Web Scraping", "APIs", "Data Processing", "React", "Full-Stack Development"],
+    teamSize: 3,
   },
 };
 
