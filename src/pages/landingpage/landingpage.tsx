@@ -434,9 +434,9 @@ function LandingPage() {
             />
 
             <Card
-              title="Data Scraping Platform"
-              subtitle="Python • Web Scraping • APIs"
-              description="Built a data scraping tool to collect, process, and structure web data for analysis and integration into backend systems."
+              title="Crypto Analysis Platform"
+              subtitle="Python • Web Scraping • APIs • React"
+              description="Crypto analysis platform with real-time data, scraping pipelines, and structured analytics tools."
               image={`${import.meta.env.BASE_URL}/projects/datascrapping/hero.png`}
               docs="/projects/data-scraping-platform"
             />
